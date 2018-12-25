@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>图书管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/lib/css/signin.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div th:include="../static/common/headbar::headbar"></div>
+<div class="panel panel-default" style="width: 90%;margin-left: 5%"></div>
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <form action="/managebooks/register/addregister" class="">
+
+            <div class="form-group has-feedback">
+                <label for="username">用户名</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="username" id="username">
+                </div>
+
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class=" glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+
+            <div class="form-group has-feedback">
+                <label for="rname">姓名</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <!--<input id="name" class="form-control" placeholder="请输入性名" required autofocus maxlength="20" type="text">
+                    -->
+                    <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="rname" id="rname">
+                </div>
+
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class=" glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <label for="password">密码</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" placeholder="请输入用户名" required autofocus name="password" id="password">
+                </div>
+
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <label for="passwordConfirm">确认密码</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input id="passwordConfirm" class="form-control" placeholder="请再次输入密码" maxlength="20" type="password">
+                </div>
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+
+            <div class="form-group has-feedback">
+                <label for="email">邮箱</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="email" id="email">
+                </div>
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+
+            <div class="form-group has-feedback">
+                <label for="phoneNum">手机号码</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="phoneNum" id="phoneNum">
+                </div>
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+
+            <div class="form-group has-feedback">
+                <label for="userid">id</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="userid" id="userid">
+                </div>
+                <span style="color:red;display: none;" class="tips"></span>
+                <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="form-group has-feedback">
+                        <label for="idcode-btn">验证码</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-qrcode"></span></span>
+                            <input id="idcode-btn" class="form-control" placeholder="请输入验证码" maxlength="4" type="text">
+                        </div>
+                        <span style="color:red;display: none;" class="tips"></span>
+                        <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="col-xs-5" style="padding-top: 30px">
+                    <div id="idcode" style="background: transparent;"></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+                <!--
+                <input class="form-control btn btn-primary"  id="submit" value="立&nbsp;&nbsp;即&nbsp;&nbsp;注&nbsp;&nbsp;册" type="submit">
+                -->
+            </div>
+
+            <div class="form-group">
+                <input value="重置" id="reset"  class="form-control btn btn-danger" type="reset">
+            </div>
+        </form>
+    </div>
+</div>
+<!--这是一段注释。注释不会在浏览器中显示。
+
+-->
+<script src="/static/lib/js/register.js"></script>
+</body>
+</html>

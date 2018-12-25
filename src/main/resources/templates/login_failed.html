@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>图书管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/lib/css/signin.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div th:include="../static/common/headbar::headbar"></div>
+    <form class="form-signin" role="form" style="padding: 30px 100px 10px";>
+    <fieldset>
+        <legend>用户不存在或密码错误</legend>
+    </fieldset>
+    <a class="btn btn-lg btn-primary btn-block" href="login" role="button">返回登陆</a>
+    </form>
+</body>
+</html>

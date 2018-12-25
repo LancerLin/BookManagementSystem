@@ -1,0 +1,21 @@
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+  datasource:
+        name: test
+        url: *****
+        username: ******
+        password: *****
+
+
+
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml
+  type-aliases-package: cn.lightina.managebooks.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
